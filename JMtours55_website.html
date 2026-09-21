@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JMtours55 | Chandigarh Airport to Delhi Airport Taxi</title>
+<meta name="description" content="JMtours55 airport taxi service for Chandigarh Airport to Delhi Airport one-way and round-trip bookings.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;color:#172033;background:#f6f8fb;line-height:1.6}
+header{background:#0b1f3a;color:#fff;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+.logo{font-size:28px;font-weight:800;letter-spacing:.5px}.logo span{color:#f7b731}
+nav a{color:#fff;text-decoration:none;margin-left:24px;font-weight:600}
+.hero{background:linear-gradient(135deg,#0b1f3a,#174b7a);color:#fff;padding:70px 6%;display:grid;grid-template-columns:1.3fr .9fr;gap:40px;align-items:center}
+.hero h1{font-size:48px;line-height:1.1;margin-bottom:18px}.hero p{font-size:19px;color:#e8eef7;margin-bottom:28px}
+.btn{display:inline-block;background:#f7b731;color:#111;text-decoration:none;padding:13px 22px;border-radius:9px;font-weight:800;margin-right:10px}
+.btn.dark{background:#fff}
+.card{background:#fff;color:#172033;padding:28px;border-radius:18px;box-shadow:0 15px 40px #0003}
+.card h2{margin-bottom:16px}.route{padding:14px;background:#eef5fb;border-radius:10px;margin:10px 0;font-weight:700}
+section{padding:60px 6%}section h2{text-align:center;font-size:32px;margin-bottom:35px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.box{background:#fff;padding:26px;border-radius:15px;box-shadow:0 6px 24px #17203312}.box h3{margin:10px 0}
+.booking{background:#0b1f3a;color:#fff}.booking h2{color:#fff}
+form{max-width:760px;margin:auto;display:grid;gap:14px}
+input,select,textarea{width:100%;padding:14px;border:0;border-radius:9px;font-size:16px}
+textarea{min-height:100px}.submit{border:0;cursor:pointer;font-size:17px}
+footer{background:#071427;color:#cdd7e5;text-align:center;padding:28px 6%}
+@media(max-width:800px){nav{display:none}.hero{grid-template-columns:1fr;padding-top:45px}.hero h1{font-size:38px}.grid{grid-template-columns:1fr}section{padding:45px 6%}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">JM<span>tours55</span></div>
+  <nav><a href="#home">Home</a><a href="#services">Services</a><a href="#booking">Book Now</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div>
+    <h1>Airport Taxi Made Simple</h1>
+    <p>Reliable taxi service for <b>Chandigarh Airport ↔ Delhi Airport</b>. One-way and up-down / round-trip bookings available.</p>
+    <a class="btn" href="#booking">Book Your Ride</a>
+    <a class="btn dark" href="#services">View Services</a>
+  </div>
+  <div class="card">
+    <h2>Popular Route</h2>
+    <div class="route">✈️ Chandigarh Airport → Delhi Airport</div>
+    <div class="route">🔄 Delhi Airport → Chandigarh Airport</div>
+    <p style="margin-top:15px">Comfortable travel • Easy booking • Door-to-airport service</p>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="grid">
+    <div class="box"><div style="font-size:34px">✈️</div><h3>One Way</h3><p>Chandigarh Airport to Delhi Airport or Delhi Airport to Chandigarh Airport.</p></div>
+    <div class="box"><div style="font-size:34px">🔄</div><h3>Up & Down</h3><p>Round-trip airport transfers for your return journey.</p></div>
+    <div class="box"><div style="font-size:34px">🚕</div><h3>Airport Transfer</h3><p>Pre-book your airport ride with JMtours55.</p></div>
+  </div>
+</section>
+
+<section class="booking" id="booking">
+  <h2>Book Your Taxi</h2>
+  <form onsubmit="sendBooking(event)">
+    <input id="name" required placeholder="Your Name">
+    <input id="phone" required type="tel" placeholder="Mobile Number">
+    <select id="trip" required>
+      <option value="">Select Trip Type</option>
+      <option>One Way</option>
+      <option>Up & Down / Round Trip</option>
+    </select>
+    <input id="pickup" required placeholder="Pickup Location">
+    <input id="drop" required placeholder="Drop Location">
+    <input id="date" required type="date">
+    <textarea id="note" placeholder="Extra details (optional)"></textarea>
+    <button class="btn submit" type="submit">Send Booking on WhatsApp</button>
+  </form>
+</section>
+
+<section id="contact">
+  <h2>Contact JMtours55</h2>
+  <div class="grid">
+    <div class="box"><h3>📞 Call</h3><p>+91 95921 53874</p></div>
+    <div class="box"><h3>💬 WhatsApp</h3><p>Bookings can be sent directly on WhatsApp.</p></div>
+    <div class="box"><h3>📍 Route</h3><p>Chandigarh Airport ↔ Delhi Airport</p></div>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 JMtours55. Airport Taxi Service.</footer>
+
+<script>
+function sendBooking(e){
+ e.preventDefault();
+ const name=document.getElementById('name').value;
+ const phone=document.getElementById('phone').value;
+ const trip=document.getElementById('trip').value;
+ const pickup=document.getElementById('pickup').value;
+ const drop=document.getElementById('drop').value;
+ const date=document.getElementById('date').value;
+ const note=document.getElementById('note').value;
+ // Replace 91XXXXXXXXXX with your WhatsApp number, including country code.
+ const whatsapp="919592153874";
+ const msg=`JMtours55 Booking%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(phone)}%0ATrip: ${encodeURIComponent(trip)}%0APickup: ${encodeURIComponent(pickup)}%0ADrop: ${encodeURIComponent(drop)}%0ADate: ${encodeURIComponent(date)}%0ADetails: ${encodeURIComponent(note)}`;
+ window.open(`https://wa.me/${whatsapp}?text=${msg}`,'_blank');
+}
+</script>
+</body>
+</html>
